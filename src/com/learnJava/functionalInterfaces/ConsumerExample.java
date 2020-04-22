@@ -49,7 +49,12 @@ public class ConsumerExample {
         list.add("Mojo JOJO");
         list.add("Johnny BRavo");
 
-        list.forEach(c1);
+        list.forEach(s -> {
+            if(s.charAt(0)=='M')
+            c1.accept(s);
+
+
+        });
 
        // printName();
       //  printNameAndActivities();

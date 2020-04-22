@@ -7,6 +7,7 @@ import java.util.function.Supplier;
 
 public class ConstructorReferenceExample {
 
+    // Supplier is made to create Student objects
     static Supplier<Student> studentSupplier = Student::new;
 
     static Function<String, Student> studentFunction = Student::new;

@@ -9,10 +9,12 @@ import java.util.function.Consumer;
 
 public class BiPredicateExample {
 
-    static BiPredicate<Integer,Double> biPredicate = (gradeLevel, gpa) ->  gradeLevel>=3 && gpa >=3.9 ;
+    static BiPredicate<Integer,Double> biPredicate1 = (gradeLevel, gpa) ->  gradeLevel >= 2 &&  gpa <= 3.7 ;
+    static BiPredicate<Integer,Double> biPredicate2 = (gradeLevel, gpa) ->  gradeLevel >= 2 &&  gpa >= 2.9 ;
 
     static Consumer<Student> consumer = (student) -> {
-            if(biPredicate.test(student.getGradeLevel(),student.getGpa())){
+
+            if(biPredicate1.and(biPredicate2).test(student.getGradeLevel(),student.getGpa())){
                 System.out.println(student);
             }
     };
@@ -25,6 +27,8 @@ public class BiPredicateExample {
     }
 
     public static void main(String[] args) {
+
+
         filterStudents();
     }
 
