@@ -70,7 +70,7 @@ public class CustomWildcards {
 
         Number ob = 20;
 
-       
+
 
 
     }
